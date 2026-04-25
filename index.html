@@ -41,14 +41,12 @@
         ::-webkit-scrollbar-track { background: var(--bg); }
         ::-webkit-scrollbar-thumb { background: var(--accent); }
 
-        /* Typography */
         h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; text-transform: uppercase; line-height: 1; }
         p { color: #999; font-size: 1rem; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
         section { padding: 100px 0; border-bottom: 1px solid var(--border); }
 
-        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             padding: 25px 5vw; display: flex; justify-content: space-between;
@@ -62,7 +60,6 @@
         .nav-links a:hover { color: white; }
         .nav-cta { background: var(--accent); color: black !important; padding: 10px 22px; border-radius: 5px; font-weight: 700; }
 
-        /* Hero */
         .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
         .hero-wrap { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
         .hero-badge { display: inline-flex; align-items: center; gap: 9px; background: rgba(57, 255, 20, 0.07); border: 1px solid rgba(57, 255, 20, 0.22); color: var(--accent); font-size: 0.7rem; font-weight: 700; padding: 8px 16px; border-radius: 100px; margin-bottom: 28px; text-transform: uppercase; }
@@ -73,10 +70,9 @@
         .stat-val { font-family: var(--font-heading); font-size: 2rem; color: var(--accent); }
         .stat-label { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; }
 
-        .hero-img-frame { position: relative; width: 100%; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+        .hero-img-frame { position: relative; width: 100%; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
         .hero-img-frame img { width: 100%; height: 500px; object-fit: cover; filter: saturate(0.9); }
 
-        /* Work Section */
         .sec-label { color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 15px; display: block; }
         .sec-title { font-size: 3rem; margin-bottom: 50px; }
         .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
@@ -88,7 +84,6 @@
         .tech-list { display: flex; flex-wrap: wrap; gap: 10px; }
         .tech-tag { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 100px; font-size: 0.7rem; color: #777; }
 
-        /* Experience */
         .exp-item { border-left: 2px solid var(--border); padding-left: 30px; position: relative; margin-bottom: 50px; }
         .exp-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
         .exp-item h3 { font-size: 1.6rem; margin-bottom: 10px; }
@@ -96,7 +91,6 @@
         .exp-item ul { color: #999; padding-left: 20px; }
         .exp-item li { margin-bottom: 10px; }
 
-        /* Contact */
         .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; margin-top: 50px; }
         .contact-card h4 { font-size: 1.2rem; margin-bottom: 10px; }
         .contact-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
@@ -129,7 +123,7 @@
                 <div class="hero-left">
                     <span class="hero-badge">Open to work</span>
                     <h1>I BUILD <span>CONTENT</span><br>& THE AI SYSTEMS<br>THAT POWER IT</h1>
-                    <p>AI Content Creator & Social Media Manager. I grew my YouTube to 11K+ subscribers and manage AI-first content workflows for a GovTech startup.</p>
+                    <p>AI Content Creator & Social Media Manager. I grew my YouTube to 11K+ subscribers and manage AI-first content workflows for GovAI.fm.</p>
                     <div class="hero-stats">
                         <div>
                             <div class="stat-val">11K+</div>
@@ -147,7 +141,7 @@
                 </div>
                 <div class="hero-right">
                     <div class="hero-img-frame">
-                        <img src="https://media.licdn.com/dms/image/v2/D5603AQF5vLOqfptQNg/profile-displayphoto-shrink_800_800/B56ZPfTH1VvwAg-/0/1735479849804?e=1751328000&v=beta&t=I0VJZ8YQkv4FQ7PtQEMYo0fF9L6Bq0jJ_rnJzFHBl3I" alt="Roni Mondal">
+                        <img src="profile.jpg.jpeg" alt="Roni Mondal">
                     </div>
                 </div>
             </div>
@@ -158,47 +152,46 @@
             <h2 class="sec-title">Building AI-Powered Content at Scale</h2>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
                 <div>
-                    <p style="margin-bottom: 20px;">I bootstrap and scale content from scratch. Built my YouTube channel to 11,000+ subscribers and 6–7 million monthly impressions through viral storytelling, optimization, and consistent execution.</p>
-                    <p>Currently working as an AI-First Content & Social Media Intern at GovAI.fm — managing full podcast-to-content pipelines and building n8n automation workflows.</p>
+                    <p style="margin-bottom: 20px;">I bootstrap and scale content from scratch. Built my YouTube channel (@vvversevibes) to 11,000+ subscribers and 6–7 million monthly impressions through viral storytelling and optimization.</p>
+                    <p>Currently an AI-First Content & Social Media Intern at GovAI.fm — managing podcast pipelines and building n8n automation workflows.</p>
                 </div>
                 <div class="tech-list" style="align-content: start;">
                     <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">n8n Automation</span>
                     <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Claude AI</span>
                     <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Gemini Pro</span>
                     <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">YouTube SEO</span>
-                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Content Strategy</span>
                 </div>
             </div>
         </section>
 
         <section id="work">
             <span class="sec-label">Featured Work</span>
-            <h2 class="sec-title">Projects That Showcase My Skills</h2>
+            <h2 class="sec-title">Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <span class="tag">Content Creator</span>
                     <h3>vvversevibes YouTube</h3>
-                    <p>Built from zero to 11K+ subscribers. Achieved 6–7M monthly impressions through data-driven content strategy.</p>
+                    <p>11K+ subscribers. 6–7M monthly impressions through motivational storytelling and viral Shorts.</p>
                     <div class="tech-list">
                         <span class="tech-tag">CapCut Pro</span>
-                        <span class="tech-tag">YouTube Studio</span>
-                        <span class="tech-tag">Storytelling</span>
+                        <span class="tech-tag">Canva</span>
+                        <span class="tech-tag">Viral Hooks</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <span class="tag">Automation Engineer</span>
-                    <h3>AI Content Workflows</h3>
-                    <p>Designed AI-powered workflows automating transcription, highlight extraction, and post drafting using n8n.</p>
+                    <span class="tag">Automation</span>
+                    <h3>AI Workflows</h3>
+                    <p>Automated podcast transcription and LinkedIn post drafting using n8n and Claude API.</p>
                     <div class="tech-list">
                         <span class="tech-tag">n8n</span>
-                        <span class="tech-tag">Claude API</span>
+                        <span class="tech-tag">Claude</span>
                         <span class="tech-tag">Notion</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <span class="tag">Full-Stack Dev</span>
+                    <span class="tag">Full-Stack</span>
                     <h3>Comment Tracker</h3>
-                    <p>Web app to track and analyze YouTube comments in real-time, helping creators manage engagement.</p>
+                    <p>Web app to track and analyze YouTube comments in real-time for better community management.</p>
                     <div class="tech-list">
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Firebase</span>
@@ -210,29 +203,28 @@
 
         <section id="experience">
             <span class="sec-label">Work History</span>
-            <h2 class="sec-title">Professional Journey</h2>
+            <h2 class="sec-title">Journey</h2>
             <div class="exp-item">
                 <h3>Content & Social Media Intern (AI-First)</h3>
-                <div class="exp-meta">GovAI.fm (VectorCraft Consulting) • Jan 2026 – Present</div>
+                <div class="exp-meta">GovAI.fm • Jan 2026 – Present</div>
                 <ul>
-                    <li>Manage end-to-end podcast → YouTube pipeline and SEO metadata.</li>
-                    <li>Built n8n automation workflows integrating Claude and Gemini Pro.</li>
-                    <li>Draft 35 LinkedIn posts per week in the founder's voice.</li>
+                    <li>Manage podcast-to-YouTube pipeline and metadata.</li>
+                    <li>Built n8n workflows saving hours of manual work.</li>
+                    <li>Draft 35 LinkedIn posts per week.</li>
                 </ul>
             </div>
             <div class="exp-item">
                 <h3>YouTube Content Creator</h3>
                 <div class="exp-meta">Self-Employed (@vvversevibes) • Jul 2023 – Present</div>
                 <ul>
-                    <li>Bootstrapped channel to 11,000+ subscribers organically.</li>
-                    <li>Achieved 6–7 million monthly impressions through viral Shorts.</li>
+                    <li>Grown to 11K+ subscribers and 6-7M monthly reach.</li>
                 </ul>
             </div>
         </section>
 
         <section id="contact">
-            <span class="sec-label">Get In Touch</span>
-            <h2 class="sec-title" style="text-align: center;">Let's Work Together</h2>
+            <span class="sec-label">Contact</span>
+            <h2 class="sec-title" style="text-align: center;">Let's Connect</h2>
             <div class="contact-grid">
                 <div class="contact-card">
                     <h4>Email</h4>
@@ -251,7 +243,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Roni Mondal. Built with accuracy and care. All rights reserved.</p>
+        <p>&copy; 2026 Roni Mondal. Accurate information verified. All rights reserved.</p>
     </footer>
 
 </body>
