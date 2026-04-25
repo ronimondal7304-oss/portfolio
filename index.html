@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roni Mondal | AI Content Creator & Developer</title>
-    <meta name="description" content="Portfolio of Roni Mondal, a full-stack developer and AI content creator specializing in automation and viral storytelling.">
+    <title>Roni Mondal | AI Content Creator & Social Media Manager</title>
+    <meta name="description" content="Portfolio of Roni Mondal, an AI Content Creator & Social Media Manager with 11K+ YouTube subscribers and 6-7M monthly impressions.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #050505;
+            --bg: #080808;
             --surface: #0f0f0f;
             --primary: #ffffff;
-            --secondary: #a1a1a1;
-            --accent: #ff3e00;
-            --border: rgba(255, 255, 255, 0.1);
-            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --secondary: #6b6b6b;
+            --accent: #39ff14;
+            --border: #1c1c1c;
+            --font-main: 'Space Grotesk', sans-serif;
             --font-heading: 'Syne', sans-serif;
         }
 
@@ -27,6 +27,8 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
             background-color: var(--bg);
             color: var(--primary);
@@ -35,202 +37,222 @@
             line-height: 1.6;
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: var(--bg); }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--accent); }
 
         /* Typography */
         h1, h2, h3 { font-family: var(--font-heading); font-weight: 800; text-transform: uppercase; line-height: 1; }
-        p { color: var(--secondary); font-size: 1.1rem; }
+        p { color: #999; font-size: 1rem; }
 
-        /* Layout */
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 5vw; }
-        section { padding: 120px 0; border-bottom: 1px solid var(--border); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 5vw; }
+        section { padding: 100px 0; border-bottom: 1px solid var(--border); }
 
         /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
-            padding: 30px 5vw; display: flex; justify-content: space-between;
-            align-items: center; mix-blend-mode: difference;
+            padding: 25px 5vw; display: flex; justify-content: space-between;
+            align-items: center; background: rgba(8, 8, 8, 0.8); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
         }
-        .logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; text-decoration: none; color: white; }
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: opacity 0.3s; }
-        .nav-links a:hover { opacity: 0.6; }
+        .logo { font-family: var(--font-heading); font-weight: 800; font-size: 1.3rem; text-decoration: none; color: white; }
+        .logo em { color: var(--accent); font-style: normal; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--secondary); font-weight: 500; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a:hover { color: white; }
+        .nav-cta { background: var(--accent); color: black !important; padding: 10px 22px; border-radius: 5px; font-weight: 700; }
 
         /* Hero */
-        .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding-top: 100px; }
-        .hero-content { position: relative; z-index: 2; }
-        .hero h1 { font-size: clamp(3rem, 10vw, 8rem); margin-bottom: 20px; letter-spacing: -2px; }
-        .hero p { max-width: 600px; font-size: 1.25rem; margin-bottom: 40px; }
-        .hero-img {
-            position: absolute; right: 5vw; top: 50%; transform: translateY(-40%);
-            width: 35vw; height: 50vw; max-height: 600px; max-width: 450px;
-            background: url('profile.jpg.jpeg') center/cover no-repeat;
-            filter: grayscale(1); transition: filter 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            border-radius: 4px; z-index: 1;
-        }
-        .hero-img:hover { filter: grayscale(0); }
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; }
+        .hero-wrap { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 9px; background: rgba(57, 255, 20, 0.07); border: 1px solid rgba(57, 255, 20, 0.22); color: var(--accent); font-size: 0.7rem; font-weight: 700; padding: 8px 16px; border-radius: 100px; margin-bottom: 28px; text-transform: uppercase; }
+        .hero h1 { font-size: clamp(2.8rem, 5vw, 5rem); margin-bottom: 25px; letter-spacing: -2px; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { max-width: 500px; font-size: 1.1rem; margin-bottom: 40px; }
+        .hero-stats { display: flex; gap: 40px; margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--border); }
+        .stat-val { font-family: var(--font-heading); font-size: 2rem; color: var(--accent); }
+        .stat-label { font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; }
 
-        /* Grid System */
-        .grid-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 80px; }
-        .grid-header h2 { font-size: 4rem; }
-        .grid-header p { max-width: 400px; text-align: right; }
+        .hero-img-frame { position: relative; width: 100%; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+        .hero-img-frame img { width: 100%; height: 500px; object-fit: cover; filter: saturate(0.9); }
 
-        /* Work / Projects */
-        .project-card { 
-            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 60px 0;
-            border-top: 1px solid var(--border); text-decoration: none; color: inherit;
-            transition: background 0.3s;
-        }
-        .project-card:hover { background: rgba(255,255,255,0.02); }
-        .project-info h3 { font-size: 2.5rem; margin-bottom: 15px; }
-        .project-tags { display: flex; gap: 10px; margin-top: 20px; }
-        .tag { padding: 5px 12px; border: 1px solid var(--border); border-radius: 20px; font-size: 0.75rem; color: var(--secondary); text-transform: uppercase; }
+        /* Work Section */
+        .sec-label { color: var(--accent); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+        .sec-title { font-size: 3rem; margin-bottom: 50px; }
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+        .project-card { background: var(--surface); border: 1px solid var(--border); padding: 35px; border-radius: 12px; transition: transform 0.3s, border-color 0.3s; }
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .project-card .tag { color: var(--accent); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; display: block; }
+        .project-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: white; }
+        .project-card p { font-size: 0.95rem; margin-bottom: 25px; }
+        .tech-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tech-tag { background: rgba(255,255,255,0.05); padding: 5px 12px; border-radius: 100px; font-size: 0.7rem; color: #777; }
 
-        /* About Section */
-        .about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 100px; }
-        .about-text h2 { font-size: 3rem; margin-bottom: 30px; }
-        .stat-item { padding: 40px 0; border-top: 1px solid var(--border); }
-        .stat-num { font-family: var(--font-heading); font-size: 4rem; display: block; }
-        .stat-label { color: var(--secondary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
+        /* Experience */
+        .exp-item { border-left: 2px solid var(--border); padding-left: 30px; position: relative; margin-bottom: 50px; }
+        .exp-item::before { content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+        .exp-item h3 { font-size: 1.6rem; margin-bottom: 10px; }
+        .exp-meta { color: var(--accent); font-size: 0.9rem; margin-bottom: 20px; font-weight: 600; }
+        .exp-item ul { color: #999; padding-left: 20px; }
+        .exp-item li { margin-bottom: 10px; }
 
         /* Contact */
-        .footer { padding: 100px 0 50px; text-align: center; }
-        .footer h2 { font-size: clamp(2rem, 8vw, 6rem); margin-bottom: 40px; }
-        .contact-link { 
-            font-family: var(--font-heading); font-size: 2rem; color: var(--primary); 
-            text-decoration: none; border-bottom: 2px solid var(--primary);
-            transition: color 0.3s, border-color 0.3s;
-        }
-        .contact-link:hover { color: var(--accent); border-color: var(--accent); }
-        .footer-bottom { margin-top: 100px; padding-top: 40px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; color: var(--secondary); font-size: 0.8rem; }
+        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; margin-top: 50px; }
+        .contact-card h4 { font-size: 1.2rem; margin-bottom: 10px; }
+        .contact-card a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+        footer { padding: 50px 0; text-align: center; border-top: 1px solid var(--border); color: var(--secondary); font-size: 0.9rem; }
 
         @media (max-width: 968px) {
-            .hero-img { display: none; }
-            .project-card, .about-grid { grid-template-columns: 1fr; gap: 40px; }
-            .grid-header { flex-direction: column; align-items: flex-start; gap: 20px; }
-            .grid-header p { text-align: left; }
+            .hero-wrap { grid-template-columns: 1fr; }
+            .hero-img-frame { display: none; }
+            .nav-links { display: none; }
+            .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="#" class="logo">RONI.</a>
+        <a href="#" class="logo">RONI <em>MONDAL</em></a>
         <div class="nav-links">
-            <a href="#work">Work</a>
             <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#work">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact" class="nav-cta">Hire Me</a>
         </div>
     </nav>
 
     <main class="container">
         <section class="hero">
-            <div class="hero-content">
-                <h1>FULL-STACK<br>CREATIVE.</h1>
-                <p>Hi, I'm Roni Mondal. I bridge the gap between complex code and viral storytelling. Based in India, I build AI-powered solutions and manage content that reaches millions.</p>
-                <div class="nav-links" style="margin-top: 20px;">
-                    <a href="#work" style="border-bottom: 1px solid white; padding-bottom: 5px;">View Projects &darr;</a>
-                </div>
-            </div>
-            <div class="hero-img"></div>
-        </section>
-
-        <section id="work">
-            <div class="grid-header">
-                <h2>SELECTED<br>WORK</h2>
-                <p>A collection of AI-driven applications, automation workflows, and creative development projects.</p>
-            </div>
-
-            <div class="project-list">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>AI Chat Platform</h3>
-                        <p>A high-performance chat application integrated with Google AI Studio and Firebase, featuring real-time stream responses.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Firebase</span>
-                            <span class="tag">Gemini API</span>
+            <div class="hero-wrap">
+                <div class="hero-left">
+                    <span class="hero-badge">Open to work</span>
+                    <h1>I BUILD <span>CONTENT</span><br>& THE AI SYSTEMS<br>THAT POWER IT</h1>
+                    <p>AI Content Creator & Social Media Manager. I grew my YouTube to 11K+ subscribers and manage AI-first content workflows for a GovTech startup.</p>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="stat-val">11K+</div>
+                            <div class="stat-label">YouTube Subs</div>
+                        </div>
+                        <div>
+                            <div class="stat-val">6-7M</div>
+                            <div class="stat-label">Monthly Reach</div>
+                        </div>
+                        <div>
+                            <div class="stat-val">2+</div>
+                            <div class="stat-label">Years Exp</div>
                         </div>
                     </div>
-                    <div class="project-desc">
-                        <p>Developed a full-stack PWA that allows users to interact with custom-tuned AI models. Focused on low-latency interactions and mobile-first design.</p>
-                    </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>YouTube Automation</h3>
-                        <p>Custom scripts and dashboards for tracking channel growth and automating metadata optimization.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">YouTube API</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                    </div>
-                    <div class="project-desc">
-                        <p>Built a tool to track comment sentiment and automate community engagement for a motivational storytelling channel with millions of impressions.</p>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Creative Portfolio</h3>
-                        <p>A minimalist, high-converting portfolio designed for creators and developers.</p>
-                        <div class="project-tags">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">Tailwind</span>
-                            <span class="tag">Framer Motion</span>
-                        </div>
-                    </div>
-                    <div class="project-desc">
-                        <p>Designed with a focus on typography and performance, ensuring sub-second load times and seamless transitions.</p>
+                <div class="hero-right">
+                    <div class="hero-img-frame">
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQF5vLOqfptQNg/profile-displayphoto-shrink_800_800/B56ZPfTH1VvwAg-/0/1735479849804?e=1751328000&v=beta&t=I0VJZ8YQkv4FQ7PtQEMYo0fF9L6Bq0jJ_rnJzFHBl3I" alt="Roni Mondal">
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>I help brands<br>scale through<br>technology.</h2>
-                    <p>With a background in both competitive engineering and creative storytelling, I bring a unique perspective to every project. Whether it's building a robust SaaS backend or crafting a viral social media strategy, I focus on measurable impact.</p>
-                    <p style="margin-top: 20px;">I specialize in the MERN stack, AI integration (Gemini/GPT), and cloud infrastructure (Vercel/Firebase/Supabase).</p>
+            <span class="sec-label">About Me</span>
+            <h2 class="sec-title">Building AI-Powered Content at Scale</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px;">
+                <div>
+                    <p style="margin-bottom: 20px;">I bootstrap and scale content from scratch. Built my YouTube channel to 11,000+ subscribers and 6–7 million monthly impressions through viral storytelling, optimization, and consistent execution.</p>
+                    <p>Currently working as an AI-First Content & Social Media Intern at GovAI.fm — managing full podcast-to-content pipelines and building n8n automation workflows.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-num">2M+</span>
-                        <span class="stat-label">Monthly Impressions</span>
+                <div class="tech-list" style="align-content: start;">
+                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">n8n Automation</span>
+                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Claude AI</span>
+                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Gemini Pro</span>
+                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">YouTube SEO</span>
+                    <span class="tech-tag" style="background: rgba(57,255,20,0.1); color: var(--accent); font-weight: 600;">Content Strategy</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="work">
+            <span class="sec-label">Featured Work</span>
+            <h2 class="sec-title">Projects That Showcase My Skills</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <span class="tag">Content Creator</span>
+                    <h3>vvversevibes YouTube</h3>
+                    <p>Built from zero to 11K+ subscribers. Achieved 6–7M monthly impressions through data-driven content strategy.</p>
+                    <div class="tech-list">
+                        <span class="tech-tag">CapCut Pro</span>
+                        <span class="tech-tag">YouTube Studio</span>
+                        <span class="tech-tag">Storytelling</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-num">50+</span>
-                        <span class="stat-label">Projects Deployed</span>
+                </div>
+                <div class="project-card">
+                    <span class="tag">Automation Engineer</span>
+                    <h3>AI Content Workflows</h3>
+                    <p>Designed AI-powered workflows automating transcription, highlight extraction, and post drafting using n8n.</p>
+                    <div class="tech-list">
+                        <span class="tech-tag">n8n</span>
+                        <span class="tech-tag">Claude API</span>
+                        <span class="tech-tag">Notion</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-num">15+</span>
-                        <span class="stat-label">AI Agents Built</span>
+                </div>
+                <div class="project-card">
+                    <span class="tag">Full-Stack Dev</span>
+                    <h3>Comment Tracker</h3>
+                    <p>Web app to track and analyze YouTube comments in real-time, helping creators manage engagement.</p>
+                    <div class="tech-list">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">YouTube API</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer id="contact" class="footer">
-            <h2>READY TO BUILD?</h2>
-            <a href="mailto:ronimondal7304@gmail.com" class="contact-link">ronimondal7304@gmail.com</a>
-            
-            <div class="footer-bottom">
-                <span>&copy; 2024 RONI MONDAL</span>
-                <div class="nav-links">
-                    <a href="https://github.com/ronimondal7304-oss" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">YouTube</a>
-                </div>
-                <span>LOCATED IN INDIA</span>
+        <section id="experience">
+            <span class="sec-label">Work History</span>
+            <h2 class="sec-title">Professional Journey</h2>
+            <div class="exp-item">
+                <h3>Content & Social Media Intern (AI-First)</h3>
+                <div class="exp-meta">GovAI.fm (VectorCraft Consulting) • Jan 2026 – Present</div>
+                <ul>
+                    <li>Manage end-to-end podcast → YouTube pipeline and SEO metadata.</li>
+                    <li>Built n8n automation workflows integrating Claude and Gemini Pro.</li>
+                    <li>Draft 35 LinkedIn posts per week in the founder's voice.</li>
+                </ul>
             </div>
-        </footer>
+            <div class="exp-item">
+                <h3>YouTube Content Creator</h3>
+                <div class="exp-meta">Self-Employed (@vvversevibes) • Jul 2023 – Present</div>
+                <ul>
+                    <li>Bootstrapped channel to 11,000+ subscribers organically.</li>
+                    <li>Achieved 6–7 million monthly impressions through viral Shorts.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <span class="sec-label">Get In Touch</span>
+            <h2 class="sec-title" style="text-align: center;">Let's Work Together</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <a href="mailto:mondalroni818@gmail.com">mondalroni818@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <h4>LinkedIn</h4>
+                    <a href="https://linkedin.com/in/roni-mondal-1a8943251" target="_blank">Connect</a>
+                </div>
+                <div class="contact-card">
+                    <h4>YouTube</h4>
+                    <a href="https://youtube.com/@vvversevibes" target="_blank">@vvversevibes</a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Roni Mondal. Built with accuracy and care. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
